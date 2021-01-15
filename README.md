@@ -1,3 +1,7 @@
+# ReactCrabs
+
+This project is a remake of my first ever javascript game [Les Crabes](https://github.com/npiriou/crabes). Les Crabes was made without any previous knowledge.It works but the code is extremely messy. As making this game was very challenging for me at the time, I'm making it again, from scratch, as my first React project.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
