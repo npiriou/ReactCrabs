@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -40,4 +41,88 @@ li {
   /* reset the margin and padding */
   margin: 0;
   padding: 0;
+}
+.top-section {
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.mid-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Attacks {
+  width: 40vw;
+
+  border: 1px solid black;
+}
+.Mobs {
+  width: 40vw;
+
+  border: 1px solid black;
+}
+.Cards {
+  margin: auto;
+  width: 60vw;
+  height: 60vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#frontline,
+#backline {
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  border: 1px solid red;
+}
+.Chat {
+  width: 80vw;
+  height: 15vh;
+  border: 1px solid black;
+  margin: auto;
+}
+.Card {
+  box-sizing: border-box;
+  width: 14.5vw;
+  height: 29vh;
+  border: 1px solid blue;
+}
+#shop-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#shop-cards .Card {
+  margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0px;
+    background-color: lightblue;
+  }
+  .top-section {
+    display: none;
+  }
+  .Cards {
+    margin: auto;
+    width: 99vw;
+    height: 60vh;
+    border: 1px solid black;
+  }
+  .Card {
+    width: 24vw;
+    height: 29vh;
+    border: 1px solid blue;
+  }
+  .mid-section {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
