@@ -46,6 +46,8 @@ function Shop(props) {
         <ShopCards
           shopCards={props.shopCards}
           passShopCards={props.passShopCards}
+          boardCards={props.boardCards}
+          passBoardCards={props.passBoardCards}
         />
       </Modal>
     </div>

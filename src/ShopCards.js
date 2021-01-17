@@ -1,17 +1,21 @@
 import Card from "./Card.js";
-import { useState } from "react";
 
 function ShopCards(props) {
   const shopCardsDisplay = [];
   props.shopCards.forEach((card) => {
     shopCardsDisplay.push(
-      <Card
-        key={card.number}
-        cardHere={card}
-        cardInShop={true}
-        shopCards={props.shopCards}
-        passShopCards={props.passShopCards}
-      />,
+      <div className="shop-card-container">
+        <Card
+          key={card.number}
+          cardHere={card}
+          cardInShop={true}
+          shopCards={props.shopCards}
+          passShopCards={props.passShopCards}
+          boardCards={props.boardCards}
+          passBoardCards={props.passBoardCards}
+        />
+        <div className="shop-card-price">{`${card.tier * 5} gold`}</div>
+      </div>,
     );
   });
 

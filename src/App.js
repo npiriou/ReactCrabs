@@ -17,8 +17,7 @@ function App() {
   const [leaks, setLeaks] = useState(0);
   const [deck, setDeck] = useState(CARDS);
   const [mobsLeft, setMobseft] = useState(null);
-  const [frontCards, setFrontCards] = useState(null);
-  const [backCards, setBackCards] = useState(null);
+  const [boardCards, setBoardCards] = useState({ frontLine: [], backLine: [] });
   const [shopCards, setShopCards] = useState([
     CARDS[0],
     CARDS[1],
@@ -38,6 +37,8 @@ function App() {
         <Buttons
           shopCards={shopCards}
           passShopCards={setShopCards}
+          boardCards={boardCards}
+          passBoardCards={setBoardCards}
           deck={deck}
           setDeck={setDeck}
           passWorkers={setWorkers}
@@ -45,7 +46,7 @@ function App() {
           passGold={setGold}
           gold={gold}
         />
-        <Cards frontCards={frontCards} backCards={backCards} />
+        <Cards boardCards={boardCards} passBoardCards={setBoardCards} />
         <Score nbWorkers={workers} gold={gold} />
       </section>
       <section className="bot-section">

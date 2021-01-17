@@ -12,7 +12,12 @@ function Buttons(props) {
     <div className="Buttons">
       <button id="start-button">Start next round</button>
       <button onClick={clickHandlerWorker}>5G Buy a worker</button>
-      <Shop shopCards={props.shopCards} passShopCards={props.passShopCards} />
+      <Shop
+        shopCards={props.shopCards}
+        passShopCards={props.passShopCards}
+        boardCards={props.boardCards}
+        passBoardCards={props.passBoardCards}
+      />
     </div>
   );
 }

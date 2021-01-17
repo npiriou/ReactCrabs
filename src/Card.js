@@ -1,10 +1,25 @@
 function Card(props) {
   const cardClickHandler = () => {
-    console.log(props);
-    if (props.cardInShop)
+    if (
+      props.cardInShop &&
+      (props.boardCards.frontLine.length < 4 ||
+        props.boardCards.backLine.length < 4)
+    ) {
+      props.passBoardCards(
+        props.boardCards.frontLine.length < 4
+          ? {
+              frontLine: [...props.boardCards.frontLine, props.cardHere],
+              backLine: [...props.boardCards.backLine],
+            }
+          : {
+              frontLine: [...props.boardCards.frontLine],
+              backLine: [...props.boardCards.backLine, props.cardHere],
+            },
+      );
       props.passShopCards(
         props.shopCards.filter((c) => c.number !== props.cardHere.number),
       );
+    }
   };
 
   const cardContent = props.cardHere ? (
@@ -15,8 +30,7 @@ function Card(props) {
           <b>{props.cardHere.name}</b>
         </span>
       </div>
-      {/* <img id="art" src ="{8}">
-</img> */}
+      {/* {<img id="art" src="" alt="card-illustration"></img>} */}
       <div id="card-attacks">
         <span> {props.cardHere.nbShAtt} Sharp</span>
         <span> {props.cardHere.nbPiAtt} Pierce</span>
