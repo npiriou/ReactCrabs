@@ -2,6 +2,7 @@ function Card(props) {
   const cardClickHandler = () => {
     if (
       props.cardInShop &&
+      props.gold >= props.cardHere.tier * 5 &&
       (props.boardCards.frontLine.length < 4 ||
         props.boardCards.backLine.length < 4)
     ) {
@@ -19,6 +20,7 @@ function Card(props) {
       props.passShopCards(
         props.shopCards.filter((c) => c.number !== props.cardHere.number),
       );
+      props.passGold(props.gold - props.cardHere.tier * 5);
     }
   };
 

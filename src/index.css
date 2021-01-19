@@ -16,9 +16,12 @@ code {
 
 .Dice {
   width: 2em;
+  height: 2em;
   border: 1px solid black;
+  border-radius: 3px;
   padding: 5px;
   box-sizing: border-box;
+  margin: 2px;
 }
 .sharp-dice {
   background-color: orange;
@@ -56,7 +59,15 @@ li {
   width: 40vw;
 
   border: 1px solid black;
+  overflow: auto;
 }
+.attacks-dices {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .Mobs {
   width: 40vw;
 

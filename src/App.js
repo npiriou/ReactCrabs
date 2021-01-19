@@ -11,6 +11,7 @@ import WAVES from "./wavesData.js";
 import CARDS from "./cardsData.js";
 function App() {
   const [wave, setWave] = useState(0);
+  const [inFight, setInFight] = useState(true);
   const [workers, setWorkers] = useState(0);
   const [gold, setGold] = useState(20);
   const [score, setScore] = useState(0);
@@ -29,7 +30,13 @@ function App() {
   return (
     <div className="App" id="App">
       <section className="top-section">
-        <Attacks />
+        <Attacks
+          inFight={inFight}
+          passInFight={setInFight}
+          mobsLeft={mobsLeft}
+          passMobseft={setMobseft}
+          boardCards={boardCards}
+        />
         <Mobs />
         <WaveInfo wave={WAVES[wave]} />
       </section>
@@ -45,6 +52,8 @@ function App() {
           nbWorkers={workers}
           passGold={setGold}
           gold={gold}
+          inFight={inFight}
+          passInFight={setInFight}
         />
         <Cards boardCards={boardCards} passBoardCards={setBoardCards} />
         <Score nbWorkers={workers} gold={gold} />

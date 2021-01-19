@@ -1,6 +1,7 @@
 import React from "react";
-import ShopCards from "./ShopCards.js";
 import Modal from "react-modal";
+import Card from "./Card.js";
+import Score from "./Score.js";
 
 const customStyles = {
   content: {
@@ -43,12 +44,25 @@ function Shop(props) {
       >
         {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
         <button onClick={closeModal}>&times;</button>
-        <ShopCards
-          shopCards={props.shopCards}
-          passShopCards={props.passShopCards}
-          boardCards={props.boardCards}
-          passBoardCards={props.passBoardCards}
-        />
+        <Score gold={props.gold} />
+        <div id="shop-cards">
+          {props.shopCards.map((card) => (
+            <div className="shop-card-container">
+              <Card
+                key={card.number}
+                cardHere={card}
+                cardInShop
+                shopCards={props.shopCards}
+                passShopCards={props.passShopCards}
+                boardCards={props.boardCards}
+                passBoardCards={props.passBoardCards}
+                gold={props.gold}
+                passGold={props.passGold}
+              />
+              <div className="shop-card-price">{`${card.tier * 5} gold`}</div>
+            </div>
+          ))}
+        </div>
       </Modal>
     </div>
   );
