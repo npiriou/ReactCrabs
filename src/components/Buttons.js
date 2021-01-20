@@ -9,14 +9,12 @@ function Buttons(props) {
     }
   };
   const clickHandlerStartRound = () => {
-    if (props.inFight) {
-      props.setInFight(true);
-    }
+    props.passInShop(false);
   };
 
-  return (
+  return props.inShop ? (
     <div className="Buttons">
-      <button id="start-button" onclick={clickHandlerStartRound}>
+      <button id="start-button" onClick={clickHandlerStartRound}>
         Start round
       </button>
       <button onClick={clickHandlerWorker} disabled={props.gold < workerPrice}>
@@ -31,7 +29,7 @@ function Buttons(props) {
         passGold={props.passGold}
       />
     </div>
-  );
+  ) : null;
 }
 
 export default Buttons;

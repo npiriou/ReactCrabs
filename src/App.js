@@ -1,17 +1,15 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import Attacks from "./Attacks.js";
-import Mobs from "./Mobs.js";
-import Score from "./Score.js";
-import Buttons from "./Buttons.js";
-import Chat from "./Chat.js";
-import Cards from "./Cards.js";
-import WaveInfo from "./WaveInfo.js";
-import WAVES from "./wavesData.js";
-import CARDS from "./cardsData.js";
+import Attacks from "./components/Attacks.js";
+import Score from "./components/Score.js";
+import Buttons from "./components/Buttons.js";
+import Chat from "./components/Chat.js";
+import Cards from "./components/Cards.js";
+import WAVES from "./components/wavesData.js";
+import CARDS from "./components/cardsData.js";
 function App() {
   const [wave, setWave] = useState(0);
-  const [inFight, setInFight] = useState(true);
+  const [inShop, setInShop] = useState(true);
   const [workers, setWorkers] = useState(0);
   const [gold, setGold] = useState(20);
   const [score, setScore] = useState(0);
@@ -29,17 +27,14 @@ function App() {
 
   return (
     <div className="App" id="App">
-      <section className="top-section">
-        <Attacks
-          inFight={inFight}
-          passInFight={setInFight}
-          mobsLeft={mobsLeft}
-          passMobseft={setMobseft}
-          boardCards={boardCards}
-        />
-        <Mobs />
-        <WaveInfo wave={WAVES[wave]} />
-      </section>
+      <Attacks
+        inShop={inShop}
+        passInShop={setInShop}
+        mobsLeft={mobsLeft}
+        passMobseft={setMobseft}
+        boardCards={boardCards}
+        wave={WAVES[wave]}
+      />
       <section className="mid-section">
         <Buttons
           shopCards={shopCards}
@@ -52,8 +47,8 @@ function App() {
           nbWorkers={workers}
           passGold={setGold}
           gold={gold}
-          inFight={inFight}
-          passInFight={setInFight}
+          inShop={inShop}
+          passInShop={setInShop}
         />
         <Cards boardCards={boardCards} passBoardCards={setBoardCards} />
         <Score nbWorkers={workers} gold={gold} />

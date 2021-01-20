@@ -67,6 +67,9 @@ li {
   justify-content: flex-start;
   align-items: center;
 }
+.rolled {
+  justify-content: flex-end;
+}
 
 .Mobs {
   width: 40vw;
