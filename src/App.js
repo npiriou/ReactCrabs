@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import Attacks from "./components/Attacks.js";
 import Score from "./components/Score.js";
 import Buttons from "./components/Buttons.js";
@@ -11,7 +11,7 @@ function App() {
   const [wave, setWave] = useState(0);
   const [inShop, setInShop] = useState(true);
   const [workers, setWorkers] = useState(0);
-  const [gold, setGold] = useState(20);
+  const [gold, setGold] = useState(500);
   const [score, setScore] = useState(0);
   const [leaks, setLeaks] = useState(0);
   const [deck, setDeck] = useState(CARDS);

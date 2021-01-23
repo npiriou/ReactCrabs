@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 import Card from "./Card.js";
+import "./Cards.css";
 
 function Cards(props) {
+  const [selected, setSelected] = useState(null);
   let frontCards = props.boardCards.frontLine;
   let backCards = props.boardCards.backLine;
   let frontline = [];
@@ -15,6 +19,8 @@ function Cards(props) {
             key={card.number}
             boardCards={props.boardCards}
             passBoardCards={props.passBoardCards}
+            selected={selected}
+            passSelected={setSelected}
           />
         </div>,
       ),
@@ -29,6 +35,8 @@ function Cards(props) {
             key={card.number}
             boardCards={props.boardCards}
             passBoardCards={props.passBoardCards}
+            selected={selected}
+            passSelected={setSelected}
           />
         </div>,
       ),

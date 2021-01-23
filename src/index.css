@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  padding: 10px;
+  padding: 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: grey;
+  background-color: rgb(120, 148, 241);
 }
 
 code {
@@ -14,28 +14,6 @@ code {
     monospace;
 }
 
-.Dice {
-  width: 2em;
-  height: 2em;
-  border: 1px solid black;
-  border-radius: 3px;
-  padding: 5px;
-  box-sizing: border-box;
-  margin: 2px;
-}
-.sharp-dice {
-  background-color: orange;
-}
-.piercing-dice {
-  background-color: pink;
-}
-.magic-dice {
-  background-color: rgb(114, 114, 241);
-}
-.mob-dice {
-  background-color: rgb(165, 165, 165);
-  border: 2px solid black;
-}
 ul {
   list-style: none;
 }
@@ -45,74 +23,11 @@ li {
   margin: 0;
   padding: 0;
 }
-.top-section {
-  height: 20vh;
-  display: flex;
-  justify-content: space-evenly;
-}
+
 .mid-section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-.Attacks {
-  width: 40vw;
-
-  border: 1px solid black;
-  overflow: auto;
-}
-.attacks-dices {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.rolled {
-  justify-content: flex-end;
-}
-
-.Mobs {
-  width: 40vw;
-
-  border: 1px solid black;
-}
-.Cards {
-  margin: auto;
-  width: 60vw;
-  height: 60vh;
-  border: 1px solid black;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-#frontline,
-#backline {
-  height: 30vh;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  border: 1px solid red;
-}
-.Chat {
-  width: 80vw;
-  height: 15vh;
-  border: 1px solid black;
-  margin: auto;
-}
-.Card {
-  box-sizing: border-box;
-  width: 14.5vw;
-  height: 29vh;
-  border: 1px solid blue;
-}
-#shop-cards {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-#shop-cards .Card {
-  margin: 10px;
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Dice from "./Dice.js";
 import WaveInfo from "./WaveInfo.js";
+import "./Attacks.css";
 
 function Attacks(props) {
   const [dices, setDices] = useState({
@@ -28,7 +29,7 @@ function Attacks(props) {
   }
   return (
     <section className="top-section">
-      <div className="Attacks">
+      <div id="Attacks">
         <div id="sharpAtt">
           <span id="sharpAtt-title">Sharp Attacks</span>
           <div id="sharpAtt-dices" className="attacks-dices">
@@ -53,7 +54,7 @@ function Attacks(props) {
           </button>
         )}
       </div>
-      <div className="Mobs">
+      <div id="Mobs">
         <div id="MobsAtt">
           <span id="MobsAtt-title">Mobs left</span>
           <div id="MobsAtt-dices" className="attacks-dices">

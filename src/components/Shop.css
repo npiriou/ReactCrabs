@@ -1,0 +1,29 @@
+#shop-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#shop-cards .Card {
+  margin: 10px;
+}
+.Modal {
+  margin: auto;
+  padding: 20px;
+  width: 60%;
+  height: 60%;
+  background-color: papayawhip;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -12px -12px 12px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}

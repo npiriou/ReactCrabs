@@ -1,0 +1,22 @@
+.Dice {
+  width: 2em;
+  height: 2em;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.25),
+    -2px -2px 2px 0 rgba(255, 255, 255, 0.3);
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 4px;
+}
+.sharp-dice {
+  background-color: orange;
+}
+.piercing-dice {
+  background-color: pink;
+}
+.magic-dice {
+  background-color: rgb(114, 114, 241);
+}
+.mob-dice {
+  background-color: rgb(136, 136, 136);
+}

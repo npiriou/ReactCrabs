@@ -1,0 +1,34 @@
+#Attacks {
+  width: 40vw;
+
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.25),
+    -5px -5px 8px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow: auto;
+  padding: 10px;
+}
+.attacks-dices {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.rolled {
+  justify-content: flex-end;
+}
+
+#Mobs {
+  width: 40vw;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.25),
+    -5px -5px 8px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+.top-section {
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,77 @@
+:root {
+  --card-bg-color: rgb(243, 231, 166);
+  --card-bg-color-select: rgb(71, 170, 250);
+}
+.Card {
+  box-sizing: border-box;
+  width: 14.5vw;
+  height: 20vh;
+  box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.25),
+    -6px -6px 8px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background-color: var(--card-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition-duration: 0.2s;
+}
+
+.Card:hover {
+  cursor: pointer;
+  transform: rotate(1deg) translate(0, -5px);
+  box-shadow: 8px 8px 10px 0 rgba(5, 7, 117, 0.25),
+    0 0 8px 0 rgba(5, 7, 117, 0.25);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+  width: 100%;
+  height: 1.5em;
+  padding: 5px;
+  padding-top: 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.card-attacks-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.card-attacks {
+}
+.card-hp-container {
+  height: 1.5em;
+  border-top: 1px solid rgba(0, 0, 0, 0.247);
+  width: 100%;
+  text-align: center;
+}
+.selected {
+  background-color: var(--card-bg-color-select);
+  transform: rotate(5deg);
+  box-shadow: 8px 8px 10px 0 rgba(5, 7, 117, 0.25),
+    0 0 8px 0 rgba(5, 7, 117, 0.25);
+}
+.card-tier-1 {
+  background-color: rgb(243, 156, 56);
+}
+.card-tier-2 {
+  background-color: rgb(230, 138, 225);
+}
+.card-tier-3 {
+  background-color: rgb(97, 82, 235);
+}
+.card-tier-4 {
+  background-color: rgb(224, 245, 225);
+}
+.card-tier-5 {
+  background-color: rgb(250, 54, 54);
+}

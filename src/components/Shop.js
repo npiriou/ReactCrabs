@@ -2,6 +2,7 @@ import React from "react";
 import Modal from "react-modal";
 import Card from "./Card.js";
 import Score from "./Score.js";
+import "./Shop.css";
 
 const customStyles = {
   content: {
@@ -39,8 +40,8 @@ function Shop(props) {
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
+        className="Modal"
+        overlayClassName="Overlay"
       >
         {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
         <button onClick={closeModal}>&times;</button>
