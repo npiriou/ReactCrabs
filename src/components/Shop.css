@@ -27,3 +27,14 @@
   display: flex;
   align-items: center;
 }
+#openShopButton {
+}
+#openShopButton,
+.enabled:hover {
+  cursor: pointer;
+}
+.shop-card-price {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
