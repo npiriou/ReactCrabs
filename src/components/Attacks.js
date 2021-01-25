@@ -4,61 +4,57 @@ import WaveInfo from "./WaveInfo.js";
 import "./Attacks.css";
 
 function Attacks(props) {
-  const [dices, setDices] = useState({
+  const tempDices = {
     shDices: [],
     piDices: [],
     maDices: [],
     mobDices: [],
-  });
-  const clickHandlerRoll = () => {
-    //todo
   };
+
   props.boardCards.frontLine.forEach((card) => {
     for (
       let i = 0;
       i < Math.max(card.nbShAtt, card.nbPiAtt, card.nbMaAtt);
       i++
     ) {
-      if (i < card.nbShAtt) dices.shDices.push(<Dice kind={"sharp-dice"} />);
-      if (i < card.nbPiAtt) dices.piDices.push(<Dice kind={"piercing-dice"} />);
-      if (i < card.nbMaAtt) dices.maDices.push(<Dice kind={"magic-dice"} />);
+      if (i < card.nbShAtt)
+        tempDices.shDices.push(<Dice kind={"sharp-dice"} />);
+      if (i < card.nbPiAtt)
+        tempDices.piDices.push(<Dice kind={"piercing-dice"} />);
+      if (i < card.nbMaAtt)
+        tempDices.maDices.push(<Dice kind={"magic-dice"} />);
     }
   });
   for (let l = 0; l < props.wave.number; l++) {
-    dices.mobDices.push(<Dice kind={"mob-dice"} />);
+    tempDices.mobDices.push(<Dice kind={"mob-dice"} />);
   }
   return (
     <section className="top-section">
       <div id="Attacks">
-        <div id="sharpAtt">
+        <div id="sharpAtt" className="attack-type">
           <span id="sharpAtt-title">Sharp Attacks</span>
           <div id="sharpAtt-dices" className="attacks-dices">
-            {dices.shDices}
+            {tempDices.shDices}
           </div>
         </div>
-        <div id="piercingAtt">
+        <div id="piercingAtt" className="attack-type">
           <span id="piercingAtt-title">Piercing Attacks</span>
           <div id="piercingAtt-dices" className="attacks-dices">
-            {dices.piDices}
+            {tempDices.piDices}
           </div>
         </div>
-        <div id="MagicAtt">
+        <div id="MagicAtt" className="attack-type">
           <span id="MagicAtt-title">Magic Attacks</span>
           <div id="MagicAtt-dices" className="attacks-dices">
-            {dices.maDices}
+            {tempDices.maDices}
           </div>
         </div>
-        {props.inShop ? null : (
-          <button id="start-button" onClick={clickHandlerRoll}>
-            Roll
-          </button>
-        )}
       </div>
       <div id="Mobs">
-        <div id="MobsAtt">
+        <div id="MobsAtt" className="attack-type">
           <span id="MobsAtt-title">Mobs left</span>
           <div id="MobsAtt-dices" className="attacks-dices">
-            {dices.mobDices}
+            {tempDices.mobDices}
           </div>
         </div>
       </div>

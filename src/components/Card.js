@@ -25,7 +25,7 @@ function Card(props) {
       props.passGold(props.gold - props.cardHere.tier * 5);
     }
     // else the card is on the board, the click is to select the card to move it
-    else {
+    else if (props.inShop) {
       if (props.selected) {
         props.passBoardCards({
           frontLine: [
