@@ -67,15 +67,19 @@ function Shop(props) {
         onRequestClose={closeModal}
         className="Modal"
         overlayClassName="Overlay"
+        ariaHideApp={false}
       >
         {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
         <button onClick={closeModal}>&times;</button>
         <Score gold={props.gold} />
         <div id="shop-cards">
           {props.shopCards.map((card) => (
-            <div className="shop-card-container">
+            <div
+              className="shop-card-container"
+              key={`shopCardContainer-${card.number}`}
+            >
               <Card
-                key={card.number}
+                key={`shop-${card.number}`}
                 cardHere={card}
                 cardInShop
                 shopCards={props.shopCards}
@@ -85,7 +89,9 @@ function Shop(props) {
                 gold={props.gold}
                 passGold={props.passGold}
               />
-              <div className="shop-card-price">{`${card.tier * 5} gold`}</div>
+              <div className="shop-card-price">{`price: ${
+                card.tier * 5
+              } gold`}</div>
             </div>
           ))}
           <div>
@@ -105,7 +111,10 @@ function Shop(props) {
                 <BuyWorker />
               )}
             </button>
-            <div className="shop-card-price">{`${workerPrice} gold`}</div>
+            <div className="shop-card-price">
+              <span>{`price: ${workerPrice} gold `}</span>
+              <span className="shop-worker-info">{`Workers: ${props.nbWorkers}/${maxWorkers}`}</span>
+            </div>
           </div>
         </div>
       </Modal>

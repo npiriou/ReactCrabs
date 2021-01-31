@@ -33,7 +33,9 @@ function Buttons(props) {
   const rollButtonLeft = () => {
     setRollButtonHovered(false);
   };
-  const clickHandlerRoll = () => {};
+  const clickHandlerRoll = () => {
+    props.passDicesRolled(true);
+  };
 
   return (
     <div className="Buttons">
@@ -68,9 +70,10 @@ function Buttons(props) {
           nbWorkers={props.nbWorkers}
         />
       ) : null}
-      {props.inShop ? null : (
+      {props.inShop || props.dicesRolled ? null : (
         <button
-          id="start-button"
+          id="roll-button"
+          className="enabled"
           onClick={clickHandlerRoll}
           onMouseOver={rollButtonHover}
           onMouseLeave={rollButtonLeft}

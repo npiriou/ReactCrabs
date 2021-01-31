@@ -15,9 +15,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [leaks, setLeaks] = useState(0);
   const [deck, setDeck] = useState(CARDS);
-  const [mobsLeft, setMobseft] = useState(null);
   const [selected, setSelected] = useState(null);
-
+  const [dicesRolled, setDicesRolled] = useState(false);
   const [boardCards, setBoardCards] = useState({ frontLine: [], backLine: [] });
   const [shopCards, setShopCards] = useState([
     CARDS[0],
@@ -32,10 +31,10 @@ function App() {
       <Attacks
         inShop={inShop}
         passInShop={setInShop}
-        mobsLeft={mobsLeft}
-        passMobseft={setMobseft}
         boardCards={boardCards}
         wave={WAVES[wave]}
+        dicesRolled={dicesRolled}
+        passDicesRolled={setDicesRolled}
       />
       <section className="mid-section">
         <Buttons
@@ -53,6 +52,8 @@ function App() {
           passInShop={setInShop}
           selected={selected}
           passSelected={setSelected}
+          dicesRolled={dicesRolled}
+          passDicesRolled={setDicesRolled}
         />
         <Cards
           boardCards={boardCards}

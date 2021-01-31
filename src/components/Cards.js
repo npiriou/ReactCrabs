@@ -15,7 +15,7 @@ function Cards(props) {
         <div className="cardCell">
           <Card
             cardHere={card}
-            key={card.number}
+            key={`front-${card.number}`}
             boardCards={props.boardCards}
             passBoardCards={props.passBoardCards}
             selected={props.selected}
@@ -33,7 +33,7 @@ function Cards(props) {
         <div className="cardCell">
           <Card
             cardHere={card}
-            key={card.number}
+            key={`back-${card.number}`}
             boardCards={props.boardCards}
             passBoardCards={props.passBoardCards}
             selected={props.selected}

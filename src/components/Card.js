@@ -65,21 +65,21 @@ function Card(props) {
         <span className="card-name">{props.cardHere.name}</span>
       </div>
       {/* {<img id="art" src="" alt="card-illustration"></img>} */}
-      <div class="card-attacks-container">
+      <div className="card-attacks-container">
         {props.cardHere.nbShAtt > 0 ? (
-          <span class="card-attacks card-attacks-sharp">
+          <span className="card-attacks card-attacks-sharp">
             {props.cardHere.nbShAtt} Sharp
           </span>
         ) : null}
 
         {props.cardHere.nbPiAtt > 0 ? (
-          <span class="card-attacks card-attacks-pierce">
+          <span className="card-attacks card-attacks-pierce">
             {props.cardHere.nbPiAtt} Piercing
           </span>
         ) : null}
 
         {props.cardHere.nbMaAtt > 0 ? (
-          <span class="card-attacks card-attacks-magic">
+          <span className="card-attacks card-attacks-magic">
             {props.cardHere.nbMaAtt} Magic
           </span>
         ) : null}
